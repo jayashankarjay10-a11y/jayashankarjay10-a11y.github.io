@@ -1,1 +1,169 @@
-<html><body><h1>Jay Bro Official Website</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jay Bro</title>
+  <meta name="description" content="Jay Bro - Official Website" />
+  <meta name="keywords" content="Jay Bro" />
+  <link rel="icon" href="https://z-cdn-media.chatglm.cn/files/09f1425e-3d51-4c53-b39d-4c5a5914506f.png?auth_key=1875575777-86bafcfb2df44fcb9392e607a9fe0c40-0-2c0c39aa113c2d575640b94f845566bd" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0b0b0b;
+      color: #f3f1ee;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .glow {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: rgba(220, 60, 60, 0.06);
+      filter: blur(120px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .container {
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 1;
+      animation: fadeUp 0.8s ease-out both;
+    }
+
+    @keyframes fadeUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 22px;
+      overflow: hidden;
+      margin: 0 auto 2rem;
+      border: 2px solid rgba(220, 60, 60, 0.25);
+      box-shadow: 0 20px 60px rgba(220, 60, 60, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #000;
+    }
+
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 span {
+      color: #dc3c3c;
+    }
+
+    .tagline {
+      color: rgba(243, 241, 238, 0.4);
+      font-size: 0.95rem;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Updated Badge Styles for Linking */
+    .play-link {
+      text-decoration: none;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .play-link:hover {
+      transform: scale(1.05);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(220, 60, 60, 0.08);
+      border: 1px solid rgba(220, 60, 60, 0.15);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 0.75rem;
+      color: #dc3c3c;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .play-link:hover .badge {
+      background: rgba(220, 60, 60, 0.15);
+      border-color: rgba(220, 60, 60, 0.3);
+    }
+
+    .badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #dc3c3c;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .info {
+      color: rgba(243, 241, 238, 0.25);
+      font-size: 0.75rem;
+      margin-top: 3rem;
+    }
+
+    .info a {
+      color: rgba(220, 60, 60, 0.5);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow"></div>
+
+  <div class="container">
+    <div class="logo">
+      <img src="https://z-cdn-media.chatglm.cn/files/09f1425e-3d51-4c53-b39d-4c5a5914506f.png?auth_key=1875575777-86bafcfb2df44fcb9392e607a9fe0c40-0-2c0c39aa113c2d575640b94f845566bd" alt="Jay Bro Logo" />
+    </div>
+    <h1>Jay <span>Bro</span></h1>
+    <p class="tagline">Official Website</p>
+    
+    <a href="https://play.google.com/store/apps/dev?id=7391490160011121447" class="play-link" target="_blank">
+      <div class="badge">
+        <span class="dot"></span>
+        Available on Google Play
+      </div>
+    </a>
+
+    <p class="info">© 2026 Jay Bro. All rights reserved.</p>
+  </div>
+
+</body>
+</html>
