@@ -165,9 +165,102 @@
         font-size: 0.75rem;
     }
     .privacy-link:hover { color: #dc3c3c; }
+
+    /* Top Nav */
+    .top-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+    .nav-link {
+      color: rgba(243, 241, 238, 0.7);
+      text-decoration: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transition: 0.3s;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .nav-link:hover {
+      color: #fff;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(5px);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background: #111;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 30px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      animation: modalFadeIn 0.3s ease-out;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      color: #aaa;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .close-btn:hover {
+      color: #fff;
+    }
+
+    .modal h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .modal p {
+      font-size: 0.85rem;
+      color: rgba(243, 241, 238, 0.5);
+      margin-bottom: 20px;
+    }
+    
+    .modal .apps-grid {
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
+
+  <div class="top-nav">
+    <a href="#" class="nav-link open-privacy-modal">Privacy Policy</a>
+  </div>
 
   <div class="glow"></div>
 
@@ -182,7 +275,7 @@
     <div class="btn-group">
       <a href="https://play.google.com/store/apps/dev?id=7391490160011121447" class="badge" target="_blank">Google Play</a>
       <a href="#" onclick="copyEmail(event)" class="badge" id="contactBtn">Contact Me</a>
-      <a href="https://jayashankarjay10-a11y.github.io/privacy-policy.html" class="badge">Privacy Policy</a>
+      <a href="#" class="badge open-privacy-modal">Privacy Policy</a>
     </div>
 
     <div class="section-title">App List</div>
@@ -214,10 +307,50 @@
     <p class="footer-info">© 2026 Jay Bro. Developed with passion.</p>
     
     <!-- Mandatory Link for Google OAuth Branding -->
-    <a href="https://jayashankarjay10-a11y.github.io/privacy-policy.html" class="privacy-link">Privacy Policy</a>
+    <a href="#" class="privacy-link open-privacy-modal">Privacy Policy</a>
+  </div>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Privacy Policies</h2>
+      <p>Select an app or game to view its privacy policy:</p>
+      <div class="apps-grid">
+        <a href="https://jayashankarjay10-a11y.github.io/word-expert-privacy/" class="app-card" target="_blank">
+          <div class="app-icon">
+            <img src="https://play-lh.googleusercontent.com/gJu1uMbBQQTqCDx-4DEBKnAppLWTZz7Tbipk55n9w-Y4_HW1ob76bJsTnL6WPc8NnG4s0ENac3jnFnCscZdW7Q=w240-h480-rw" alt="Word Expert" />
+          </div>
+          <div style="font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">Word Expert</div>
+          <div style="font-size: 0.7rem; color: #777;">Privacy Policy</div>
+        </a>
+      </div>
+    </div>
   </div>
 
   <script>
+    // Privacy Modal Logic
+    const privacyBtns = document.querySelectorAll(".open-privacy-modal");
+    const privacyModal = document.getElementById("privacyModal");
+    const closeBtn = document.querySelector(".close-btn");
+
+    privacyBtns.forEach(btn => {
+      btn.addEventListener("click", function(e) {
+        e.preventDefault();
+        privacyModal.style.display = "flex";
+      });
+    });
+
+    closeBtn.addEventListener("click", function() {
+      privacyModal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(event) {
+      if (event.target === privacyModal) {
+        privacyModal.style.display = "none";
+      }
+    });
+
     function copyEmail(e) {
       e.preventDefault();
       navigator.clipboard.writeText("jayashankar.jay10@gmail.com").then(() => {
