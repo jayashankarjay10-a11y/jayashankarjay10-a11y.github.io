@@ -151,62 +151,7 @@
     }
     .social-links a:hover { color: #dc3c3c; }
 
-    /* Collapsible Legal & Footer */
-    .legal-box {
-      margin-top: 4rem;
-      padding: 15px 20px;
-      border: 1px solid rgba(220, 60, 60, 0.3);
-      border-radius: 12px;
-      background: rgba(220, 60, 60, 0.05);
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
-      transition: all 0.3s ease;
-    }
-
-    /* Style the clickable title */
-    .legal-box summary {
-      color: #dc3c3c;
-      font-size: 0.9rem;
-      font-weight: 600;
-      cursor: pointer;
-      list-style: none; /* Hides the default arrow in Firefox */
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      outline: none;
-    }
-
-    /* Hide the default arrow in Chrome/Safari */
-    .legal-box summary::-webkit-details-marker {
-      display: none;
-    }
-
-    /* Add custom + and - icons */
-    .legal-box summary::after {
-      content: '+';
-      font-size: 1.2rem;
-      color: #dc3c3c;
-      transition: transform 0.3s ease;
-    }
-
-    .legal-box[open] summary::after {
-      content: '−';
-    }
-
-    .legal-content {
-      margin-top: 15px;
-      padding-top: 15px;
-      border-top: 1px solid rgba(220, 60, 60, 0.2);
-    }
-    
-    .legal-content p {
-      font-size: 0.8rem;
-      color: rgba(243, 241, 238, 0.8);
-      line-height: 1.6;
-    }
-
+    /* Footer */
     .footer-info { color: rgba(243, 241, 238, 0.15); font-size: 0.75rem; margin-top: 2rem; }
     
     /* Privacy Link for Google Verification */
@@ -328,15 +273,9 @@
       <a href="#">GitHub</a>
     </div>
 
-    <details class="legal-box">
-      <summary>Legal Ownership & Developer Verification</summary>
-      <div class="legal-content">
-        <p>I, V Jayashankar, am an individual application developer operating as a sole proprietor. "Jay Bro" is my public display name on the Google Play Store and is not a separate registered corporate entity. All applications and games published under the developer name "Jay Bro" are the sole legal property of V Jayashankar.</p>
-      </div>
-    </details>
-
     <p class="footer-info">© 2026 V Jayashankar (operating as Jay Bro). Developed with passion.</p>
     
+    <a href="legal-ownership.html" class="privacy-link">Legal Ownership & Developer Verification</a>
     <a href="website-privacy.html" class="privacy-link">Website Privacy Policy</a>
   </div>
 
