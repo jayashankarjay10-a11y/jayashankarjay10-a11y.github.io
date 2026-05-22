@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- Google Search Console Ownership Verification -->
-<meta name="google-site-verification" content="g6qjfIBcdAqa5Q6YBakZZzqYhmwCZjm5rd0DphwZBJs" />
+  <meta name="google-site-verification" content="g6qjfIBcdAqa5Q6YBakZZzqYhmwCZjm5rd0DphwZBJs" />
 
-  <!-- AdMob Crawler Verification -->
   <meta name="google-admob-crawler-verification" content="ca-pub-9374965654828079" />
 
   <title>Jay Bro | Official</title>
@@ -153,7 +151,28 @@
     }
     .social-links a:hover { color: #dc3c3c; }
 
-    .footer-info { color: rgba(243, 241, 238, 0.15); font-size: 0.7rem; margin-top: 3rem; }
+    /* Legal & Footer */
+    .legal-box {
+      margin-top: 4rem;
+      padding: 20px;
+      border: 1px solid rgba(220, 60, 60, 0.3);
+      border-radius: 12px;
+      background: rgba(220, 60, 60, 0.05);
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    
+    .legal-box strong { color: #dc3c3c; display: block; margin-bottom: 8px; font-size: 0.9rem;}
+    
+    .legal-box p {
+      font-size: 0.8rem;
+      color: rgba(243, 241, 238, 0.8);
+      line-height: 1.6;
+    }
+
+    .footer-info { color: rgba(243, 241, 238, 0.15); font-size: 0.75rem; margin-top: 2rem; }
     
     /* Privacy Link for Google Verification */
     .privacy-link {
@@ -164,31 +183,6 @@
         font-size: 0.75rem;
     }
     .privacy-link:hover { color: #dc3c3c; }
-
-    /* Top Nav */
-    .top-nav {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 10;
-    }
-    .nav-link {
-      color: rgba(243, 241, 238, 0.7);
-      text-decoration: none;
-      font-size: 0.75rem;
-      font-weight: 600;
-      transition: 0.3s;
-      padding: 8px 16px;
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 20px;
-      background: rgba(255,255,255,0.05);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .nav-link:hover {
-      color: #fff;
-      background: rgba(255,255,255,0.1);
-    }
 
     /* Modal */
     .modal {
@@ -299,16 +293,19 @@
       <a href="#">GitHub</a>
     </div>
 
-    <p class="footer-info">© 2026 Jay Bro. Developed with passion.</p>
+    <div class="legal-box">
+      <strong>Legal Ownership & Developer Verification:</strong>
+      <p>I, V Jayashankar, am an individual application developer operating as a sole proprietor. "Jay Bro" is my public display name on the Google Play Store and is not a separate registered corporate entity. All applications and games published under the developer name "Jay Bro" are the sole legal property of V Jayashankar.</p>
+    </div>
+
+    <p class="footer-info">© 2026 V Jayashankar (operating as Jay Bro). Developed with passion.</p>
     
-    <!-- Website Privacy Policy Link -->
     <a href="website-privacy.html" class="privacy-link">Website Privacy Policy</a>
   </div>
 
-  <!-- Privacy Policy Modal -->
   <div id="privacyModal" class="modal">
     <div class="modal-content">
-      <span class="close-btn">&times;</span>
+      <span class="close-btn">×</span>
       <h2>Privacy Policies</h2>
       <p>Select an app or game to view its privacy policy:</p>
       <div class="apps-grid">
