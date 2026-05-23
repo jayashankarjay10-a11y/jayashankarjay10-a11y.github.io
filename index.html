@@ -321,12 +321,15 @@
 
     function copyEmail(e) {
       e.preventDefault();
-      navigator.clipboard.writeText("jayashankar.jay10@gmail.com").then(() => {
+      
+      // We break the email apart so bots can't read it
+      const user = "jayashankar.jay10";
+      const domain = "gmail.com";
+      const safeEmail = user + "@" + domain;
+
+      navigator.clipboard.writeText(safeEmail).then(() => {
         const btn = document.getElementById("contactBtn");
         btn.innerText = "Email Copied! ✅";
         setTimeout(() => btn.innerText = "Contact Me", 2500);
       });
     }
-  </script>
-</body>
-</html>
