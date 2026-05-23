@@ -327,9 +327,35 @@
       const domain = "gmail.com";
       const safeEmail = user + "@" + domain;
 
-      navigator.clipboard.writeText(safeEmail).then(() => {
+      // The function that changes the button text
+      function showSuccess() {
         const btn = document.getElementById("contactBtn");
         btn.innerText = "Email Copied! ✅";
         setTimeout(() => btn.innerText = "Contact Me", 2500);
-      });
+      }
+
+      // Try the modern way first (works on live HTTPS websites)
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(safeEmail).then(() => {
+          showSuccess();
+        });
+      } else {
+        // Fallback way (works when testing locally on your computer)
+        const textArea = document.createElement("textarea");
+        textArea.value = safeEmail;
+        textArea.style.position = "fixed"; // Keep it hidden
+        textArea.style.left = "-9999px";
+        document.body.appendChild(textArea);
+        textArea.select();
+        try {
+          document.execCommand('copy');
+          showSuccess();
+        } catch (err) {
+          console.error('Fallback failed', err);
+        }
+        document.body.removeChild(textArea);
+      }
     }
+  </script>
+</body>
+</html>
