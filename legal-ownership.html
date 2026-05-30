@@ -6,7 +6,6 @@
   <title>Legal Ownership & Developer Verification - Jay Bro</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- Added minor compliance styling to blend perfectly with your layout -->
   <style>
     .compliance-section {
       background: rgba(255, 255, 255, 0.05);
@@ -20,12 +19,17 @@
       margin-top: 0;
       color: #3498db;
     }
-    .compliance-section ul {
-      padding-left: 20px;
-      margin-top: 10px;
+    .compliance-section h3 {
+      font-size: 1rem;
+      margin: 20px 0 10px 0;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 5px;
     }
-    .compliance-section li {
-      margin-bottom: 8px;
+    .compliance-section p {
+      margin-bottom: 15px;
     }
     .compliance-section a {
       color: #3498db;
@@ -33,6 +37,39 @@
     }
     .compliance-section a:hover {
       text-decoration: underline;
+    }
+    /* Structured Catalog Cards */
+    .catalog-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 15px;
+      margin: 12px 0;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .catalog-card .asset-title {
+      color: #fff;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .catalog-card .asset-package {
+      font-family: monospace;
+      background: rgba(0, 0, 0, 0.2);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #e0e0e0;
+    }
+    .catalog-details {
+      list-style-type: none !important;
+      padding-left: 0 !important;
+      margin-top: 8px !important;
+    }
+    .catalog-details li {
+      margin-bottom: 4px !important;
+      font-size: 0.9rem;
+    }
+    .catalog-details li strong {
+      color: #bebebe;
     }
   </style>
 </head>
@@ -53,9 +90,69 @@
     <!-- BILLDESK MANDATORY MERCHANT DISCLOSURE SECTION -->
     <div class="compliance-section">
       <h2>Official Merchant & Product Disclosures (RBI PA-CB Compliance)</h2>
-      <p><strong>Description of Products & Digital Services Sold:</strong><br>
-      The Service Provider utilizes this platform as a central portfolio to showcase software developments. Primary commercial assets are mobile utility applications and interactive puzzle games distributed off-site via the official Google Play Store marketplace (such as <em>Word Expert: Unique Challenge</em> [Package: <code>com.wordtower.game</code>] and <em>TagList</em> [Package: <code>com.yourname.taglist</code>]). Monetization features include off-site programmatic advertisements (Google AdMob) and optional one-time digital in-app microtransactions to remove ads or access extended functions.</p>
       
+      <p><strong>Description of Products & Digital Services Sold:</strong><br>
+      The Service Provider utilizes this platform as a central portfolio directory to showcase independent software developments. The catalog of digital assets, active monetization structures, and upcoming pipeline items includes:</p>
+
+      <!-- CATEGORY 1: ACTIVE GOOGLE PLAY STORE APPS -->
+      <h3>Active Mobile Applications (Google Play Store)</h3>
+      
+      <div class="catalog-card">
+        <span class="asset-title">Word Expert: Unique Challenge</span> 
+        <span class="asset-package">com.wordtower.game</span>
+        <ul class="catalog-details">
+          <li><strong>Type:</strong> Interactive Mobile Puzzle Game</li>
+          <li><strong>Monetization:</strong> Distributed as free-to-play. Monetized off-site through programmatic advertisements (Google AdMob) and voluntary rewarded video ad tracking loops.</li>
+        </ul>
+      </div>
+
+      <div class="catalog-card">
+        <span class="asset-title">TagList</span> 
+        <span class="asset-package">com.yourname.taglist</span>
+        <ul class="catalog-details">
+          <li><strong>Type:</strong> Mobile Utility Application</li>
+          <li><strong>Monetization:</strong> Free to download with optional, premium digital one-time in-app purchases (IAP) handled off-site to clear ads and unlock features like local database backup encryption.</li>
+        </ul>
+      </div>
+
+<!-- CATEGORY 2: WEB BASED PROJECTS -->
+      <h3>Webgames & Upcoming Releases</h3>
+      
+      <div class="catalog-card">
+        <span class="asset-title">Webgames Portfolio</span>
+        <ul class="catalog-details">
+          <li><strong>Status:</strong> Free-to-Play Browser Demonstrations</li>
+          <li><strong>Monetization & Ads:</strong> These games are ad-supported utilizing programmatic web ad networks (such as Google AdSense).</li>
+          <li><strong>In-Game Virtual Items:</strong> Certain titles feature optional in-game microtransactions for virtual currency (e.g., coins or tokens). All transactional checkout processing, accounting, and token balance settlements are handled off-site through secure third-party provider platforms (such as Facebook or Apple/Google web billing configurations). No direct transaction clearing engines are hosted on this domain.</li>
+        </ul>
+      </div>
+
+
+      <!-- CATEGORY 3: EXTENSIONS -->
+      <h3>Browser Tools & Extensions</h3>
+      
+      <div class="catalog-card">
+        <span class="asset-title">Chrome Extensions Portfolio</span>
+        <ul class="catalog-details">
+          <li><strong>Status:</strong> Software Directory & Add-ons</li>
+          <li><strong>Monetization:</strong> Optional community creator support channels (such as Ko-fi or PayPal) represent standalone voluntary donations and are completely isolated from this merchant account workflow.</li>
+        </ul>
+      </div>
+
+      <!-- TEMPLATE FOR FUTURE ADDITIONS: 
+      To add a new item later, just uncomment this block and fill it out:
+      <div class="catalog-card">
+        <span class="asset-title">App Name</span> 
+        <span class="asset-package">package.id</span>
+        <ul class="catalog-details">
+          <li><strong>Type:</strong> Game / Utility / Webgame</li>
+          <li><strong>Monetization:</strong> Add details here.</li>
+        </ul>
+      </div>
+      -->
+
+      <h3>E-Commerce & Operational Policies</h3>
+
       <p><strong>Payment Framework & Settlement Logistics:</strong><br>
       This portfolio domain (<code>jaybro.net</code>) hosts informational listings, upcoming previews, and direct store redirection links only. <strong>No active e-commerce shopping carts, manual billing processing pipelines, or direct card-handling gateway options are run on this website.</strong> All digital settlements and monetization clearances are securely integrated and managed off-site via the native <strong>Google Play Billing system</strong> inside the Android games.</p>
 
