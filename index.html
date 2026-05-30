@@ -13,6 +13,30 @@
 <meta name="description" content="Jay Bro - Official Website" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
+  <!-- Firebase SDK for Analytics and Performance Monitoring -->
+  <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-analytics.js";
+  import { getPerformance } from "https://www.gstatic.com/firebasejs/12.14.0/firebase-performance.js";
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBJzIQK6OVa8vsQabt3tYL9tFW21cNSiJg",
+      authDomain: "jay-bro-website-analytics.firebaseapp.com",
+      projectId: "jay-bro-website-analytics",
+      storageBucket: "jay-bro-website-analytics.firebasestorage.app",
+      messagingSenderId: "656237413920",
+      appId: "1:656237413920:web:1a53ca5c374ec9aced9e45",
+      measurementId: "G-4F34YM4GPB"
+    };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const performance = getPerformance(app);
+  </script>
 </head>
 <body>
 
@@ -49,7 +73,7 @@
       <div class="accordion-wrapper">
         <div class="accordion-inner">
           <div class="apps-grid">
-            <a href="https://play.google.com/store/apps/details?id=com.yourname.taglist" class="app-card" target="_blank">
+            <a href="https://play.google.com/store/apps/details?id=com.yourname.taglist" class="app-card">
               <div class="app-icon">
                 <img src="images/taglist-app-logo.png" alt="TagList" />
               </div>
@@ -178,7 +202,7 @@
   <footer class="site-footer">
     <div class="social-links">
       <a href="https://www.instagram.com/jayashankar008/" target="_blank">Instagram</a>
-      <a href="https://www.youtube.com/@Jay_Bro_007" target="_blank">YouTube</a>
+      <a href="https://www.youtube.com/@jaybro3713" target="_blank">YouTube</a>
       <a href="#">GitHub</a>
     </div>
     
