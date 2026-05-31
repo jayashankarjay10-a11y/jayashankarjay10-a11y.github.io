@@ -515,17 +515,17 @@
     margin: 4rem auto;
     z-index: 1;
   }
-  .page-container h1 { color: #dc3c3c; font-size: 2rem; margin-bottom: 20px; }
+  .page-container h1 { color: #3498db; font-size: 2rem; margin-bottom: 20px; }
   .page-container h2 { font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; color: #fff; }
   .page-container p { color: rgba(243, 241, 238, 0.8); margin-bottom: 15px; font-size: 0.95rem; line-height: 1.6; }
-  .page-container a { color: #dc3c3c; text-decoration: none; }
+  .page-container a { color: #3498db; text-decoration: none; }
   .page-container a:hover { text-decoration: underline; }
   .back-btn {
     display: inline-block;
     margin-bottom: 30px;
     padding: 10px 20px;
     background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(220, 60, 60, 0.3);
+    border: 1px solid rgba(52, 152, 219, 0.3);
     border-radius: 50px;
     color: #fff;
     transition: 0.3s;
@@ -534,7 +534,7 @@
     font-weight: 600;
   }
   .back-btn:hover {
-    background: #dc3c3c;
+    background: #3498db;
     color: #fff;
-    box-shadow: 0 10px 20px rgba(220, 60, 60, 0.2);
+    box-shadow: 0 10px 20px rgba(52, 152, 219, 0.2);
   }
