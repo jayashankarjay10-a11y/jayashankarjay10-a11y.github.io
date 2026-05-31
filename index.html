@@ -11,7 +11,7 @@
 <title>Jay Bro | Official</title>
 <link rel="icon" type="image/png" href="images/jaybro-logo.png" />
 <meta name="description" content="Jay Bro - Official Website" />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
   <!-- Firebase SDK for Analytics and Performance Monitoring -->
   <script type="module">
@@ -36,6 +36,9 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const performance = getPerformance(app);
+  
+  // Log to console to utilize variables and clear editor warnings
+  console.log("Firebase Active:", analytics, performance);
   </script>
 </head>
 <body>
@@ -170,6 +173,7 @@
         </a>
       </div>
 
+      <!-- HIDDEN UNTIL NEEDED: Featured Collaborators
       <div class="section-title">Featured Collaborators</div>
       <div class="collab-grid">
         <a href="#" class="collab-card" target="_blank">
@@ -181,7 +185,7 @@
           <div class="badge" style="padding: 6px 16px; font-size: 0.65rem;">Visit Channel</div>
         </a>
         
-        <!-- Copy and paste the card above as many times as you need for more collaborators -->
+        [Note: Copy and paste the card above as many times as you need for more collaborators]
         <a href="#" class="collab-card" target="_blank">
           <div class="collab-avatar">
             <img src="images/placeholder-avatar.png" alt="Collaborator" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect fill=\'%231a1a1a\' width=\'100\' height=\'100\'/><text fill=\'%23555\' font-size=\'40\' font-family=\'sans-serif\' x=\'50\' y=\'55\' text-anchor=\'middle\' dominant-baseline=\'middle\'>👤</text></svg>'"/>
@@ -191,6 +195,8 @@
           <div class="badge" style="padding: 6px 16px; font-size: 0.65rem;">Visit Channel</div>
         </a>
       </div>
+      -->
+     
 
       <div class="section-title">Latest Industry News</div>
       <div class="rss-container" id="rss-news-grid">
@@ -213,7 +219,7 @@
       <span class="separator">|</span>
       <a href="about-me.html" class="privacy-link">About Me</a>
       <span class="separator">|</span>
-      <a href="legal-ownership.html" class="privacy-link">Legal Ownership & Developer Verification</a>
+      <a href="legal-ownership.html" class="privacy-link">Legal Ownership &amp; Developer Verification</a>
       <span class="separator">|</span>
       <a href="terms-and-conditions.html" class="privacy-link">Terms and Conditions</a>
       <span class="separator">|</span>
